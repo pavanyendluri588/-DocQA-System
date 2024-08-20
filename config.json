@@ -1,0 +1,36 @@
+    {
+        "settings": {
+        "input_folder": "input_folder",
+        "output_folder":"output_folder",
+        "output_excel_filename":"Question_Responses_Output.xlsx",
+        "image_directory_name":"extracted_images"
+    },
+    "openai" :{
+        "openai_only_text_model":"gpt-3.5-turbo",
+        "openai_text_image_model":"gpt-4o",
+        "temperature":0.0
+    },
+    "logging": {
+        "log_file": "logs.log",
+        "log_level": "INFO",
+        "max_bytes": 5242880,
+        "backup_count": 5,
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "VectorDB": {
+        "collection_name" : "PDF_text_image_collection",
+        "embedding_model_name": "text-embedding-ada-002",
+        "vector_db_persist_directory_name": "MyVectorDB",
+        "retriever":{
+            "search_algorithm":"similarity",
+            "score_threshold": 0.7,
+            "max_images":5,
+            "top_k":5
+
+        }
+    },
+    "text_splitter" :{
+        "chunk_size":1000,
+        "chunk_overlap":200
+    }
+}
