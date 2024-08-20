@@ -86,7 +86,7 @@ The [DocQA project](<repository_url>) aims to enhance information retrieval by p
 
 To understand the architecture of the DocQA system, refer to the diagram below:
 
-![Architecture Diagram](images/RAG_team14_arch_diagram%20(3).jpeg)
+![Architecture Diagram](Images/RAG_team14_arch_diagram%20(3).jpeg)
 
 ## Conclusion
 
