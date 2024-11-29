@@ -1,7 +1,7 @@
 import os
 from typing import Collection
 import pandas as pd
-from openai import OpenAI
+from groq import Groq
 import logging
 from logging.handlers import RotatingFileHandler
 from langchain_community.vectorstores import Chroma
@@ -13,19 +13,24 @@ from logging_config import logger
 from utilities import config
 from file_processer import process_all_files
 from dotenv import load_dotenv
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
 
-def initialize_openai_client():
+def initialize_groq_client():
     """
-    Initialize the OpenAI client.
+    Initialize the Groq client.
 
     Returns:
-        openai: Initialized OpenAI client.
+        groq: Initialized Groq client.
     """
     load_dotenv()
-    client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    client = Groq(
+        api_key=os.getenv("GROQ_API_KEY")
+        # Remove any proxy settings as Groq client doesn't support them
+    )
     return client
+
 
 def initialize_vector_db(embedding_model_name, db_collection_name, vector_db_persist_directory):
     """
@@ -39,7 +44,7 @@ def initialize_vector_db(embedding_model_name, db_collection_name, vector_db_per
     Returns:
         Chroma: Initialized vector database.
     """
-    embedding_function = OpenAIEmbeddings(api_key=os.getenv("OPENAI_API_KEY"), model=embedding_model_name)
+    embedding_function = HuggingFaceEmbeddings( model_name="bert-base-uncased",model_kwargs={'device': 'cpu'})
     vector_db = Chroma(
         collection_name=db_collection_name,
         embedding_function=embedding_function,
@@ -133,7 +138,7 @@ def main():
     retriver_max_images = config['VectorDB']["retriever"]["max_images"]
     retriver_top_k = config['VectorDB']["retriever"]["top_k"]
 
-    openai_client = initialize_openai_client()
+    openai_client = initialize_groq_client()
 
     vector_db = initialize_vector_db(
         db_collection_name=db_collection_name,

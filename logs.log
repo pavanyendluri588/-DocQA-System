@@ -1,0 +1,20 @@
+2024-11-29 19:32:44,286 - logging_config - INFO - Processing PDF file: Pavan_Yendluri_resume.pdf
+2024-11-29 19:32:44,287 - logging_config - INFO - Processing PDF file: input_folder\Pavan_Yendluri_resume.pdf
+2024-11-29 19:32:44,288 - logging_config - INFO - Processing PDF: 'input_folder\Pavan_Yendluri_resume.pdf'
+2024-11-29 19:32:44,336 - logging_config - INFO - Extracting text from PDF: input_folder\Pavan_Yendluri_resume.pdf, Page No: 1
+2024-11-29 19:32:46,681 - logging_config - INFO - Extracting text from PDF: input_folder\Pavan_Yendluri_resume.pdf, Page No: 2
+2024-11-29 19:32:47,601 - logging_config - INFO - Processed PDF file: Pavan_Yendluri_resume.pdf
+2024-11-29 19:32:47,601 - logging_config - INFO - All files have been processed.
+2024-11-29 19:32:47,601 - logging_config - ERROR - Invalid question provided: 
+2024-11-29 19:32:47,602 - logging_config - ERROR - Error generating answer: The question must be a non-empty string.
+2024-11-29 19:32:59,810 - logging_config - INFO - Retrieved 5 documents for question: what is pavans qualifications
+2024-11-29 19:33:00,263 - logging_config - ERROR - Error generating answer: Error code: 404 - {'error': {'message': 'The model `gpt-3.5-turbo` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}
+2024-11-29 19:36:20,869 - logging_config - INFO - Processing PDF file: Pavan_Yendluri_resume.pdf
+2024-11-29 19:36:20,869 - logging_config - INFO - Processing PDF file: input_folder\Pavan_Yendluri_resume.pdf
+2024-11-29 19:36:20,871 - logging_config - INFO - Processing PDF: 'input_folder\Pavan_Yendluri_resume.pdf'
+2024-11-29 19:36:20,884 - logging_config - INFO - Extracting text from PDF: input_folder\Pavan_Yendluri_resume.pdf, Page No: 1
+2024-11-29 19:36:22,171 - logging_config - INFO - Extracting text from PDF: input_folder\Pavan_Yendluri_resume.pdf, Page No: 2
+2024-11-29 19:36:22,847 - logging_config - INFO - Processed PDF file: Pavan_Yendluri_resume.pdf
+2024-11-29 19:36:22,848 - logging_config - INFO - All files have been processed.
+2024-11-29 19:36:51,332 - logging_config - INFO - Retrieved 5 documents for question: who is yendluri pavan?
+2024-11-29 19:36:52,770 - logging_config - INFO - Appended data to Question_Responses_Output.xlsx.

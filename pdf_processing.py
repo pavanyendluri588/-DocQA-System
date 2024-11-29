@@ -170,6 +170,6 @@ def process_pdf(pdf_path: str, output_folder: str, vector_db: Any, openai_client
             
     try:
         PDF_text_processor(pdf_path, vector_db, text_chunker)
-        PDF_image_processor(pdf_path, output_folder, vector_db, openai_client, model_name, text_chunker)
+        #PDF_image_processor(pdf_path, output_folder, vector_db, openai_client, model_name, text_chunker)
     except Exception as e:
         logger.error(f"Error processing PDF file '{pdf_path}': {e}")
